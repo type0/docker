@@ -1,0 +1,29 @@
+# Log level
+#
+# Optional
+# Default: "ERROR"
+#
+# Accepted values, in order of severity: "DEBUG", "INFO", "WARN", "ERROR", "FATAL", "PANIC"
+# Messages at and above the selected level will be logged.
+#
+logLevel = "DEBUG"
+[traefikLog]
+  filePath = "C:/etc/traefik/traefik.log"
+  format   = "json"
+
+################################################################
+# Web configuration backend
+################################################################
+[web]
+address = ":8080"
+################################################################
+# Docker configuration backend
+################################################################
+#[docker]
+#endpoint = "tcp://127.0.0.1:2375"
+#endpoint = "tcp://172.18.228.113:2375"
+domain = "docker.local"
+watch = true
+
+# increase docker api version to 1.24 with swarm-mode :-)
+swarmmode = true
